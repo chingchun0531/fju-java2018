@@ -14,14 +14,24 @@ public class random {
 		
 		Random random = new Random();
 		int secret = random.nextInt(100)+1;
-		System.out.print("Guess a number between 1 to 100 :");
+		int min =1;
+		int max=100;
+		System.out.println(min + "to" + max + "Guess a number:");
 		Scanner scanner = new Scanner(System.in);
 		int guess = scanner.nextInt();
-        
+		while(guess != secret) {
+		if(guess>secret&&guess<=100) {
+			max=guess;
+		}
+		else {
+			min=guess;
+		}
+		System.out.println(min+"to"+max+"Guess a number:");
+		guess = scanner.nextInt();
+		}
+        System.out.println("correct!");
 		System.out.println(secret);
 		
-		
-
 	}
-
 }
+
