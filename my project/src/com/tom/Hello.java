@@ -9,8 +9,7 @@ public class Hello {
 		String name = scanner.nextLine();
 		System.out.println(name);
 
-		Student stu = new Student("Hank", 70, 90);
-		stu.print();
+
 
 		System.out.println(3 <= 5);
 		String s = new String("abc");
